@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <meta name="author" content="Harsh Sharma">
+    <title>Document</title>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>forms - html</title>
+        <style>
+           
+            body {
+                background: linear-gradient(to right, #6a11cb, #2575fc);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            
+            h1 {
+                color: white;
+                text-align: center;
+                padding-top: 20px;
+            }
+            
+            .form {
+                width: 100%;
+                max-width: 500px;
+                margin: 40px auto;
+                background: linear-gradient(to right, #2575fc, #6a11cb);
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 10px 25px rgba(109, 233, 247, 0.811);
+            }
+            
+            label {
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 6px;
+                color:  #0a0909f1;
+            }
+            
+            .in,
+            #date,
+            #gender,
+            textarea {
+                width: 100%;
+                padding: 10px 15px;
+                font-size: 14px;
+                border-radius: 10px;
+                border: 1px solid #cccccc;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+                transition: border 0.3s ease;
+                color: rgba(17, 16, 16, 0.708);
+            }
+            
+            
+            #message {
+                height: 120px;
+                resize: none;
+            }
+            
+            #gender {
+                appearance: none;
+                background-color: #f0f0f0;
+                cursor: pointer;
+            }
+            
+            h2 {
+                font-size: 18px;
+                color: #121212f6;
+                margin-top: 20px;
+            }
+            
+            input[type="radio"],
+            input[type="checkbox"] {
+                margin-right: 8px;
+                accent-color: #6a11cb;
+            }
+            
+            .btn {
+                width: 100%;
+                padding: 12px;
+                background-color: #6a11cb;
+                color: white;
+                font-size: 18px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+            
+            .btn:hover {
+                background-color: #5118b3;
+            }
+            
+        </style>
+    </head>
+
+</head>
+
+<body>
+
+    <body>
+        <h1 style="color: black; text-align: center;">Forms</h1>
+       
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="form">
+                <form id="myForm">
+                    
+                    
+                        <label for="name">Name</label>
+                        <br>
+                        <input class="in" id="name" type="text" placeholder="Enter your name" required>
+                    
+                        <br>
+                   
+                        <label for="ph">phone</label>
+                        <br>
+                        <input class="in" id="ph" type="phone" placeholder="Enter phone" required>
+                        
+                        <br>
+                    
+                        <label for="email">Email</label><br>
+                        <input class="in" id="email" type="email" placeholder="Enter your email" required>
+                        
+                        <br>
+                   
+                        <label for="password">Password</label><br>
+                        <input class="in" id="password" type="password" placeholder="Enter your password" required>
+                    
+                        <br>
+                    <div>
+                        <label for="date">Date</label>
+                        <input class="in" id="date" type="date" placeholder="Enter your date" required>
+                    </div><br>
+
+                    <!-- dropdwon (select-input) for gender -->
+                    <div>
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option class="sel" value="" disabled selected>Select</option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+
+                    <!-- radio button for subscription -->
+                    <div>
+                        <h2>Subscription plan</h2>
+                        <input type="hidden" name="access_key" value="a3a2572d-8637-4b23-98b6-e14855828818">
+
+                        <input type="radio" id="basic" name="subscription" value="basic" required>
+                        <label for="basic">Basic</label>
+
+                        <input type="radio" id="premium" name="subscription" value="premium" required>
+                        <label for="premium">premium</label>
+
+                        <input type="radio" id="vip" name="subscription" value="vip" required>
+                        <label for="vip">vip</label>
+                    </div> <br>
+
+                    <!-- checkbox for terms and conditions -->
+
+                    <div>
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the terms and conditions</label>
+                    </div><br>
+
+                    <!-- text input for message -->
+
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+                    </div><br>
+                    <button class="btn">Submit</button>
+                    <!-- forms ends here -->
+
+                </form>
+            </div>
+    </body>
+</body>
+
+</html>
